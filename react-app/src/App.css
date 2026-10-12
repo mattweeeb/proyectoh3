@@ -1,0 +1,36 @@
+.store-page,
+.about-page {
+  min-height: 100svh;
+}
+
+.store-page,
+.about-page {
+  color: var(--ink);
+  background: var(--paper);
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.not-found-page {
+  min-height: 100svh;
+  padding: clamp(2rem, 8vw, 8rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: #18211d;
+  background: #f4f0e9;
+}
+
+.not-found-page h1 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 400;
+  line-height: .95;
+  letter-spacing: -.06em;
+}
+
+.not-found-page > p:not(.eyebrow) {
+  margin: 1.5rem 0 2rem;
+  font: 1rem/1.5 Arial, sans-serif;
+}

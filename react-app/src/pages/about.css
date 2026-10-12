@@ -1,0 +1,64 @@
+.about-page {
+  --ink: #18211d;
+  --paper: #f4f0e9;
+  --acid: #d9f24a;
+  --orange: #e24b2d;
+  --muted: #64706a;
+  --line: rgba(24, 33, 29, .2);
+  --shadow: 0 24px 60px rgba(24, 33, 29, .12);
+}
+
+@scope (.about-page) {
+.site-header, main, .site-footer { max-width: 1240px; margin: auto; padding-left: 2.5rem; padding-right: 2.5rem; }
+.site-header { position: sticky; top: 0; z-index: 5; height: 76px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); background: rgba(244, 240, 233, .94); backdrop-filter: blur(10px); }
+.brand { color: var(--ink); font: 700 1.3rem Arial, sans-serif; letter-spacing: .12em; text-decoration: none; }
+.brand span { color: var(--orange); }
+.back-link, .site-footer a { color: var(--ink); font: 700 .7rem Arial, sans-serif; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; }
+.back-link:hover, .site-footer a:hover { color: var(--orange); }
+.back-link span, .site-footer span { font-size: 1rem; }
+.intro { padding: 7rem 0 8rem; border-bottom: 1px solid var(--line); }
+.eyebrow { margin: 0 0 1.2rem; color: var(--orange); font: 700 .68rem Arial, sans-serif; letter-spacing: .15em; text-transform: uppercase; }
+.intro h1 { max-width: 980px; margin: 0; font-size: clamp(3.5rem, 8vw, 8rem); font-weight: 400; line-height: .87; letter-spacing: -.06em; }
+.intro h1 em { color: var(--orange); font-style: italic; }
+.intro-copy { max-width: 470px; margin: 2.5rem 0 0 35%; color: var(--muted); font-size: 1.15rem; line-height: 1.5; }
+.purpose-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin: 6rem 0 9rem; background: var(--line); box-shadow: var(--shadow); }
+.purpose-card { min-height: 460px; padding: 2.5rem; display: flex; flex-direction: column; background: var(--paper); transition: transform .25s ease; }
+.purpose-card:hover { transform: translateY(-6px); }
+.purpose-card .number { margin: 0 0 auto; font: 700 .7rem Arial, sans-serif; }
+.purpose-card h2 { max-width: 450px; margin: .5rem 0 1.5rem; font-size: 2.7rem; font-weight: 400; line-height: .98; letter-spacing: -.04em; }
+.purpose-card > p:last-child { max-width: 390px; margin: 0; font: 1rem Arial, sans-serif; line-height: 1.5; }
+.mission-card { background: var(--acid); }
+.values { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; padding-bottom: 8rem; }
+.values h2 { margin: 0; font-size: 3.5rem; font-weight: 400; letter-spacing: -.05em; }
+.value-list { border-top: 1px solid var(--ink); }
+.value-button { width: 100%; min-height: 44px; padding: 1.25rem 0; display: flex; align-items: center; justify-content: space-between; border: 0; border-bottom: 1px solid var(--line); background: none; color: var(--ink); font: 700 1.1rem Arial, sans-serif; text-align: left; cursor: pointer; }
+.value-button:hover { color: var(--orange); }
+.value-button span { font-size: 1.5rem; font-weight: 400; transition: transform .2s ease; }
+.value-button.active span { transform: rotate(45deg); }
+.value-copy { max-width: 520px; margin: 0; padding: 0 2rem 1.25rem 0; color: var(--muted); font: 1rem Arial, sans-serif; line-height: 1.5; }
+.hidden { display: none; }
+.site-footer { display: flex; justify-content: space-between; padding-top: 1.5rem; padding-bottom: 2rem; border-top: 1px solid var(--line); font: .7rem Arial, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+.site-footer p { margin: 0; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
+
+@media (max-width: 720px) {
+  .site-header, main, .site-footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .site-header { height: 64px; }
+  .back-link { font-size: .6rem; }
+  .intro { padding: 4.5rem 0 5rem; }
+  .intro h1 { font-size: 4.5rem; }
+  .intro-copy { margin: 2rem 0 0; font-size: 1rem; }
+  .purpose-grid, .values { grid-template-columns: 1fr; }
+  .purpose-grid { margin: 4rem 0 6rem; }
+  .purpose-card { min-height: 390px; padding: 1.5rem; }
+  .purpose-card h2 { font-size: 2.2rem; }
+  .values { gap: 3rem; padding-bottom: 5rem; }
+  .values h2 { font-size: 2.8rem; }
+  .site-footer { display: block; padding-left: 1.25rem; padding-right: 1.25rem; line-height: 2; }
+  .site-footer p { margin: 0 0 .5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
+}
